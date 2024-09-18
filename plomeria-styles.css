@@ -1,7 +1,88 @@
-/* Estilos optimizados para el footer */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css');
+
+:root {
+    --primario: #04155f;
+    --secundario: #04155f;
+    --gris: #f5f5f5;
+    --transicion: 0.3s ease;
+    --color-blanco: #fff;
+    --color-hover: rgb(5, 4, 15);
+    --color-texto: #333333;
+    --color-fondo: #f5f5f5;
+    --color-negro: #000;
+    --altura-imagen-destacada: 30rem;
+    --altura-imagen-destacada-movil: 20rem;
+    --altura-imagen-nosotros: 30rem;
+    --altura-imagen-nosotros-movil: 20rem;
+    --opacidad-imagen-nosotros: 0.8;
+    --transicion-opacidad: 0.3s ease;
+    --color-primario: #04155f;
+    --color-secundario: #e65659;
+    --color-azul: #0000ff;
+    --grosor-borde: 0.2rem;
+    --borde-redondeado: 15px;
+    --sombra: 0 6px 12px rgba(0, 0, 0, 0.1);
+    --altura-licenciatura: 38rem;
+    --tamaño-fuente-titulo: 2.4rem;
+    --tamaño-fuente-display: 1.8rem;
+    --altura-linea-display: 3rem;
+    --borde-inferior-footer: 10px;
+    --ancho-maximo-contacto: 990px;
+    --tamaño-fuente-contacto: 1.2rem;
+    --tamaño-icono-contacto: 2rem;
+    --altura-imagen-completa: 300px;
+}
+
+body {
+    font-family: sans-serif;
+    color: var(--color-texto);
+    background-color: #fff;
+    padding-top: 60px;
+}
+
+/* Estilos optimizados para el header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.header .nav-link {
+    color: var(--color-blanco) !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.header .nav-link:hover,
+.header .nav-link:focus,
+.header .current_page_item .nav-link {
+    color: #ffcc00 !important;
+    text-decoration: underline;
+}
+
+.header .navbar-toggler {
+    border-color: var(--color-blanco);
+}
+
+.header .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.header .logo img {
+    filter: brightness(0) invert(1);
+}
+
+/* Estilos para el footer */
 .footer {
     background-color: #f8f9fa;
     color: #000000;
+    border-bottom: var(--borde-inferior-footer) solid var(--color-primario);
 }
 
 .footer h4 {
@@ -27,23 +108,6 @@
     color: #000000 !important;
 }
 
-body.home {
-    color: #000000;
-}
-
-.emergency-cta .btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    color: #ffffff !important;
-    font-weight: bold;
-}
-
-.emergency-cta .btn-danger:hover {
-    background-color: #c82333;
-    border-color: #bd2130;
-}
-
-/* Sobrescribir estilos específicos que puedan estar causando problemas */
 .footer p {
     background-color: transparent;
     padding: 0;
@@ -53,12 +117,10 @@ body.home {
     color: #000000 !important;
 }
 
-/* Asegurar que los iconos de redes sociales sean visibles */
 .footer .fab {
     color: #000000 !important;
 }
 
-/* Estilo para los enlaces de redes sociales */
 .footer .redes-sociales a {
     color: #000000 !important;
     text-decoration: none;
@@ -68,7 +130,54 @@ body.home {
     color: #0056b3 !important;
 }
 
-/* Estilos específicos del sitio */
+/* Estilos generales */
+p {
+    font-weight: 300;
+    line-height: 2rem;
+    font-size: 1rem;
+    word-break: break-word;
+    white-space: pre-wrap;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+.imagen > div {
+    height: 30rem;
+}
+
+.entrada .btn-primary {
+    color: var(--color-blanco) !important;
+}
+
+.bg-primary,
+.btn-primary,
+.list-group-item-primary {
+    background-color: var(--color-primario) !important;
+}
+
+.btn-primary {
+    border-color: var(--color-primario);
+}
+
+.badge-secondary,
+.bg-secondary,
+.list-group-item-secondary {
+    background-color: var(--color-secundario) !important;
+}
+
+.badge-secondary {
+    color: #000;
+}
+
+.bg-light {
+    background-color: var(--color-blanco) !important;
+}
+
+/* Resto de tus estilos específicos */
+/* ... (mantén el resto de tus estilos aquí) ... */
+
+/* Estilos para elementos flotantes y botones */
 .floating-call-button {
     position: fixed;
     bottom: 20px;
@@ -84,40 +193,6 @@ body.home {
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     z-index: 9999;
 }
-
-.floating-call-button svg {
-    margin-right: 10px;
-}
-
-.floating-call-button span {
-    font-size: 16px;
-}
-
-@media (max-width: 600px) {
-    .floating-call-button {
-        padding: 10px 15px;
-    }
-    .floating-call-button span {
-        font-size: 14px;
-    }
-}
-
-header.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #0056b3;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-}
-
-body {
-    padding-top: 60px;
-}
-
-/* Resto de tus estilos específicos */
 
 .wafb-button {
     position: fixed;
@@ -136,27 +211,14 @@ body {
     transition: all 0.3s ease;
 }
 
-.wafb-button:hover {
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.wafb-icon {
-    width: 40px;
-    height: 40px;
-    fill: #ffffff;
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+/* Media queries */
+@media (min-width: 768px) {
+    .imagen > div {
+        height: 40rem;
+    }
+    .imagen-inferior .bg-secondary {
+        order: 2;
+    }
 }
 
 @media (max-width: 768px) {
@@ -165,14 +227,28 @@ body {
         height: 50px;
         right: 15px;
     }
-    
     .wafb-icon {
         width: 30px;
         height: 30px;
     }
 }
 
-/* Importa Bootstrap desde un CDN */
-@import url('https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css');
+@media (max-width: 600px) {
+    .floating-call-button {
+        padding: 10px 15px;
+    }
+    .floating-call-button span {
+        font-size: 14px;
+    }
+}
 
-:root{--primario:#04155f;--secundario:#04155f;--gris:#f5f5f5;--transicion:0.3s ease;--color-blanco:#fff;--color-hover:rgb(5, 4, 15);--color-texto:#333333;--color-fondo:#f5f5f5;--color-blanco:#fff;--color-negro:#000;--altura-imagen-destacada:30rem;--altura-imagen-destacada-movil:20rem;--altura-imagen-nosotros:30rem;--altura-imagen-nosotros-movil:20rem;--opacidad-imagen-nosotros:0.8;--transicion-opacidad:0.3s ease;--color-primario:#04155f;--color-secundario:#e65659;--color-azul:#0000ff;--color-blanco:#fff;--color-texto:#333333;--color-blanco:#fff;--grosor-borde:0.2rem;--borde-redondeado:15px;--sombra:0 6px 12px rgba(0, 0, 0, 0.1);--transicion:0.3s ease;--altura-licenciatura:38rem;--tamaÃ±o-fuente-titulo:2.4rem;--tamaÃ±o-fuente-display:1.8rem;--altura-linea-display:3rem;--borde-inferior-footer:10px;--sombra:0 4px 6px rgba(0, 0, 0, 0.1);--ancho-maximo-contacto:990px;--tamaÃ±o-fuente-contacto:1.2rem;--tamaÃ±o-icono-contacto:2rem;--altura-imagen-completa:300px}body{font-family:sans-serif;color:var(--color-texto);background-color:#fff}p{font-weight:300;line-height:2rem;font-size:1rem;word-break:break-word;white-space:pre-wrap;color:#333;background-color:#f5f5f5;padding:10px}.imagen>div{height:30rem}.entrada .btn-primary{color:var(--color-blanco)!important}.bg-primary,.btn-primary,.list-group-item-primary{background-color:var(--color-primario)!important}.btn-primary{border-color:var(--color-primario)}.badge-secondary,.bg-secondary,.list-group-item-secondary{background-color:var(--color-secundario)!important}.badge-secondary{color:#000}.nav-link{color:#030101}.current_page_item .nav-link{color:var(--color-primario);border-bottom:2px solid var(--color-primario)}.bg-light{background-color:var(--color-blanco)!important}.header{background-color:#04155f;color:#fff}.imagen>div{height:30rem}@media (min-width:768px){.imagen>div{height:40rem}}.imagen-fondo{background-size:cover;background-position:top center}.imagen-inferior .contenido,.imagen-superior .contenido{border-style:solid;border-width:1px 0}.imagen-superior .contenido{border-color:var(--color-blanco)}.imagen-inferior .contenido{border-color:var(--color-negro)}@media (min-width:768px){.imagen-inferior .bg-secondary{order:2}}body.home .clases{background-color:var(--color-fondo)}.imagen-destacada{height:var(--altura-imagen-destacada);width:100%;background-size:cover;background-position:center;background-repeat:no-repeat}@media (min-width:768px){.imagen-inferior .bg-secondary{order:2}}@media (max-width:480px){.imagen-destacada{height:var(--altura-imagen-destacada-movil)}}.nosotros{position:relative;border:none;border-radius:.9375rem;padding:3rem;box-shadow:0 .375rem .75rem rgba(0,0,0,.1);background-color:#fff;overflow:hidden;transition:transform .3s ease}.nosotros::before{content:"";position:absolute;top:0;left:0;width:100%;height:.5rem;background-color:#0a07b3;transform:scaleX(0);transform-origin:left;transition:transform .3s ease}.nosotros:hover{transform:translateY(-5px)}.nosotros:hover::before{transform:scaleX(1)}.nosotros.mt-5{margin-top:5rem}.nosotros .container{max-width:1200px;margin-left:auto;margin-right:auto}.nosotros .informacion{position:relative;z-index:1}.nosotros .informacion h3{font-weight:600;font-size:2rem;margin-bottom:1.5rem;color:#0a07b3}.subrayado{position:relative;display:inline-block;padding:.2rem .5rem;transition:all .3s ease}.subrayado::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background-color:#04155f;transform:scaleX(0);transform-origin:left;transition:transform .3s ease}.subrayado:hover{color:#04155f;transform:translateY(-2px);text-shadow:0 2px 4px rgba(0,0,0,.2)}.subrayado:hover::after{transform:scaleX(1)}.nosotros .imagen{position:absolute;top:0;right:0;width:40%;height:var(--altura-imagen-nosotros);object-fit:cover;opacity:var(--opacidad-imagen-nosotros);transition:opacity var(--transicion-opacidad)}.nosotros:hover .imagen{opacity:1}@media (min-width:768px){.nosotros .imagen{height:100%}}@media (max-width:480px){.nosotros .imagen{height:var(--altura-imagen-nosotros-movil);width:100%;position:relative}}.servicios{text-align:center;position:relative;border:none;border-radius:var(--borde-redondeado);padding:3rem;box-shadow:var(--sombra);background-color:var(--color-blanco);overflow:hidden;transition:transform var(--transicion)}.servicios h2{font-size:36px;font-weight:700;color:var(--color-azul);margin-bottom:20px;text-transform:uppercase;letter-spacing:2px;position:relative;display:inline-block}.servicios h2::after,.servicios h2::before{content:"";position:absolute;bottom:-10px;width:50px;height:3px;background-color:var(--color-primario);transition:width var(--transicion)}.servicios h2::before{left:0;transform:translateX(-100%)}.servicios h2::after{right:0;transform:translateX(100%)}.servicios:hover h2::after,.servicios:hover h2::before{width:100%}blockquote.subtitulo{font-size:1.6rem;color:var(--color-texto);font-style:italic;font-weight:100;border-left:var(--grosor-borde) solid var(--color-primario)}.contenido-entrada .meta span,.entrada a,.page-item a,.page-link{color:#000!important;text-decoration:none!important}.contenido-entrada .meta span:hover,.entrada a:hover,.page-item a:hover,.page-link:hover{color:#000!important}.btn-primary:hover{background-color:var(--color-secundario);border-color:var(--color-secundario)}.contenido-entrada .meta p{font-weight:700}.text-light{color:var(--color-blanco)!important}.licenciatura{background-size:cover;background-position:center}.licenciatura .row{height:var(--altura-licenciatura)}.licenciatura .contenido h2{font-weight:700;font-size:var(--tamaÃ±o-fuente-titulo)}.display-4{font-size:var(--tamaÃ±o-fuente-display);line-height:var(--altura-linea-display)}.Localidad{position:relative;background-size:cover;background-position:center;background-repeat:no-repeat}.Localidad .row{height:var(--altura-localidad)}.Localidad .contenido h2{font-weight:700;font-size:var(--tamaÃ±o-fuente-titulo)}.display-4{font-size:var(--tamaÃ±o-fuente-display);line-height:var(--altura-linea-display)}.footer{border-bottom:var(--borde-inferior-footer) solid var(--color-primario)}
+@media (max-width: 480px) {
+    .imagen-destacada {
+        height: var(--altura-imagen-destacada-movil);
+    }
+    .nosotros .imagen {
+        height: var(--altura-imagen-nosotros-movil);
+        width: 100%;
+        position: relative;
+    }
+}
