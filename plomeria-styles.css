@@ -1,3 +1,29 @@
+/* Añade o modifica estas reglas en tu archivo CSS */
+
+.footer-link {
+    color: #0056b3 !important; /* Un azul más oscuro para mejor contraste */
+    text-decoration: underline; /* Añade subrayado para mayor visibilidad */
+}
+
+.footer-link:hover {
+    color: #003d82 !important; /* Aún más oscuro al pasar el ratón */
+}
+
+/* Si necesitas un estilo diferente para los enlaces en el fondo gris */
+.bg-light .footer-link {
+    color: #004085 !important; /* Azul más oscuro para el fondo gris */
+}
+
+.bg-light .footer-link:hover {
+    color: #002752 !important;
+}
+
+/* Asegúrate de que el texto normal también tenga suficiente contraste */
+.footer {
+    color: #212529; /* Un gris muy oscuro, casi negro */
+}
+
+
 /* Estilos específicos del sitio */
 .floating-call-button {
     position: fixed;
