@@ -1,43 +1,40 @@
-/* Estilos de alto contraste para el footer */
+/* Estilos optimizados para el footer */
 .footer {
-    background-color: #f8f9fa; /* Un fondo ligeramente gris claro */
-    color: #212529; /* Texto casi negro para máximo contraste */
+    background-color: #f8f9fa;
+    color: #000000;
 }
 
 .footer h4 {
-    color: #000000; /* Títulos en negro puro */
+    color: #000000;
 }
 
-.footer-link,
+.footer .footer-link,
 .footer a,
 .footer span[itemprop="name"],
 .footer p,
 .footer div {
-    color: #000000 !important; /* Todo el texto en negro */
-    text-decoration: underline; /* Subrayado para mayor visibilidad */
+    color: #000000 !important;
+    text-decoration: underline;
 }
 
-.footer-link:hover,
+.footer .footer-link:hover,
 .footer a:hover {
-    color: #0056b3 !important; /* Azul oscuro al pasar el ratón */
-    text-decoration: none; /* Quita el subrayado al pasar el ratón */
+    color: #0056b3 !important;
+    text-decoration: none;
 }
 
-/* Estilo específico para los elementos de la lista de servicios */
 .footer ul.list-unstyled li a span {
     color: #000000 !important;
 }
 
-/* Asegurarse de que el texto en el body también tenga suficiente contraste */
 body.home {
-    color: #212529; /* Un gris muy oscuro, casi negro */
+    color: #000000;
 }
 
-/* Estilo para el botón de emergencia */
 .emergency-cta .btn-danger {
-    background-color: #dc3545; /* Rojo Bootstrap */
+    background-color: #dc3545;
     border-color: #dc3545;
-    color: #ffffff !important; /* Texto blanco */
+    color: #ffffff !important;
     font-weight: bold;
 }
 
@@ -46,6 +43,30 @@ body.home {
     border-color: #bd2130;
 }
 
+/* Sobrescribir estilos específicos que puedan estar causando problemas */
+.footer p {
+    background-color: transparent;
+    padding: 0;
+}
+
+.footer .btn-social {
+    color: #000000 !important;
+}
+
+/* Asegurar que los iconos de redes sociales sean visibles */
+.footer .fab {
+    color: #000000 !important;
+}
+
+/* Estilo para los enlaces de redes sociales */
+.footer .redes-sociales a {
+    color: #000000 !important;
+    text-decoration: none;
+}
+
+.footer .redes-sociales a:hover {
+    color: #0056b3 !important;
+}
 
 /* Estilos específicos del sitio */
 .floating-call-button {
